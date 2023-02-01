@@ -6,7 +6,7 @@
         }
   
         .firstsection {
-            height: 100vh;
+            height: 100%;
         }
   
         .box-main {
@@ -20,7 +20,7 @@
         }
   
         .firstHalf {
-            width: 75%;
+            width: 100%;
             display: flex;
             flex-direction: column; 
             justify-content: center
@@ -40,7 +40,7 @@
   
         .text-small {
             font-family: 'Sansita Swashed', cursive;
-            font-size: 18px;
+            font-size: 18px; 
             text-align: center;
         }
   
