@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fjalla One', sans-serif;
+    background: linear-gradient( #fff, #fefefe, #eaeaea);
+}
+
+header {
+    margin-top: -100px;
+    position: fixed;
+    width: 100%;
+    background-color: #00bcd4; /* #2c8eec; */
+    /* padding-inline-start: 2rem; */
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #00bcd4;
+    font-family: "Poppins", sans-serif;
+}
+
+.logo {
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-links li {
+    list-style: none;
+    justify-self: space-around;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #00bcd4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    .nav-links li {
+        opacity: 0;
+    }
+    
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active {
+        transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+.accordion {
+    max-width: 990px;
+    background: rgba(0, 0, 0, 0.10);
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+    flex-direction: row;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+.box {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    background-position: left;
+    background-size: cover;
+    transition: .7s;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+}
+.box:hover{
+    flex: 7;
+    height: 400px;
+}
+.a1 {
+    background-image: url("https://i.graphicmama.com/blog/wp-content/uploads/2019/03/08163421/6-Trends-for-the-Classrooms-of-the-Future1.jpg");
+}
+.a2 {
+    background-image: url("https://www.wlu.ca/academics/faculties/faculty-of-education/assets/images/edi-educator-resources-banner.jpg")
+}
+.a3 {
+    background-image: url("https://images.hindustantimes.com/rf/image_size_640x362/HT/p2/2015/12/01/Pictures/_c34102da-9849-11e5-b4f4-1b7a09ed2cea.jpg");
+    color: #fff;
+}
+.a4 {
+    background-image: url("https://i.graphicmama.com/blog/wp-content/uploads/2019/03/08163421/6-Trends-for-the-Classrooms-of-the-Future1.jpg");
+    color: #fff;
+}
+.a5 {
+    background-image: url("http://www.speedlabs.in/blog/wp-content/uploads/2021/06/blog41-primary.jpg"); 
+}
+p {
+    font-weight: normal;
+    font-family: 'Exo 2', sans-serif;
+}
+.text {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    padding: 10px;
+}
+.box:hover .text{
+    opacity:1;
+}
+h1 {
+    width: 50%;
+    text-align: center;
+    margin: 100px auto auto auto;
+}
+@media screen and (max-width: 800px){
+    body{
+        margin: 0;
+    }
+    .accordion {
+        flex-direction: column;
+        height: 700px;
+        box-shadow: none;
+    }
+    .box {
+        box-shadow: none;
+    }
+    .box:hover {
+        flex: 7;
+    }
+}
+
+.grid3{
+    display: grid;
+    padding:15px;
+    grid-gap: 16px;
+}
+
+.grid3 .col{
+    background: #2c8eec;
+    border-radius: 37px;
+    margin-bottom: 16px;
+    padding: 16px; 
+}
+
+@media (min-width: 681px) {
+.grid3{
+    justify-self:center;
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid3 .col{
+    background: #2c8eec;
+}
+}
+
+@media (min-width: 1024px) {
+.grid3{
+    justify-self:center;
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid3 .col{
+    background: #2c8eec;
+}
+}
+
+
+.menu{
+    align-self: center;
+    margin-left: 30px;
+}
+
+
+.accordion2 {
+    width: 90%;
+    background: #00bcd4;
+    padding: 15px;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-size: 21px;
+    text-indent: 10px;
+    box-sizing: border-box;
+}
+.item {
+    background: #fff;
+    width: 90%;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin: 6px 0px;
+    transition: .5s;
+}
+.section {
+    position: relative;
+    padding: 15px;
+    color: #262626;
+    cursor: pointer;
+    border-bottom: 1.5px solid #ccc;
+}
+.info {
+    width: 90%;
+    color: #808080;
+    max-height: 0;
+    opacity: 0;
+    transition: .5s;
+}
+.section:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f105";
+    padding-right: 10px;
+    transition: .5s;
+}
+.item.active >  .info {
+    max-height: 100%;
+    margin-left: 30px;
+    padding: 13px 10px 20px 10px;
+    opacity: 1;
+}
+.item.active {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.50);
+    transform: scale(1.05);
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+.item.active > .section:before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f107";
+    margin-left: 30px;
+}
+
+.content p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #262626;
+    margin: 10px 0px;
+    line-height: 1.5;
+}
+
+
+footer{
+    position: relative;
+    margin-bottom: -50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #2c8eec;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+    transition: color .4s ease;
+}
+.socials a:hover i{
+    color: aqua;
+}
+.footer-bottom{
+    margin-bottom: -55px;
+    background-color: #014e97;
+    width: 100vw;
+    height: 50px;
+    /* padding: 20px; */
+    text-align: center;
+}
+.footer-bottom p{
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+ }
+ .footer-bottom p a{
+   color:#44bae8;
+   font-size: 16px;
+   text-decoration: none;
+ }
+ .footer-bottom span{
+     text-transform: uppercase;
+     background: #014e97;
+     font-weight: 200;
+ }
+
+.footer-menu{
+    background: #014e97;
+    float: right;
+    padding-right: 50px;
+  }
+  
+  .footer-menu ul{
+    display: flex;
+  }
+  
+  .footer-menu ul li{
+  padding-right: 10px;
+  display: block;
+  }
+  
+  .footer-menu ul li a{
+    color: #cfd2d6;
+    text-decoration: none;
+  }
+  
+  .footer-menu ul li a:hover{
+    color: #27bcda;
+  }
+
+@media (max-width:500px) {
+    .footer-menu ul{
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    }
